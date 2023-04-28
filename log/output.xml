@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.0 on win32)" generated="20230425 14:49:23.751" rpa="false" schemaversion="3">
+<suite id="s1" name="Basic" source="C:\Users\bmahe\Downloads\Govardhana\PythonClass-main\basic.robot">
+<test id="s1-t1" name="Testcase" line="16">
+<kw name="keyword1">
+<arg>${input}</arg>
+<arg>${input2}</arg>
+<kw name="Addition" library="file">
+<var>${result}</var>
+<arg>${val}</arg>
+<arg>${val2}</arg>
+<msg timestamp="20230425 14:49:23.791" level="INFO">${result} = 77</msg>
+<status status="PASS" starttime="20230425 14:49:23.791" endtime="20230425 14:49:23.793"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${result}</arg>
+<arg>${expected}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20230425 14:49:23.795" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20230425 14:49:23.794" endtime="20230425 14:49:23.795"/>
+</kw>
+<status status="PASS" starttime="20230425 14:49:23.790" endtime="20230425 14:49:23.795"/>
+</kw>
+<kw name="Log File" library="OperatingSystem">
+<arg>file://output.txt</arg>
+<doc>Wrapper for `Get File` that also logs the returned file.</doc>
+<msg timestamp="20230425 14:49:23.795" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\bmahe\Downloads\Govardhana\PythonClass-main\file:\output.txt"&gt;C:\Users\bmahe\Downloads\Govardhana\PythonClass-main\file:\output.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20230425 14:49:23.796" level="FAIL">OSError: [Errno 22] Invalid argument: 'C:\\Users\\bmahe\\Downloads\\Govardhana\\PythonClass-main\\file:\\output.txt'</msg>
+<status status="FAIL" starttime="20230425 14:49:23.795" endtime="20230425 14:49:23.796"/>
+</kw>
+<status status="FAIL" starttime="20230425 14:49:23.789" endtime="20230425 14:49:23.796">OSError: [Errno 22] Invalid argument: 'C:\\Users\\bmahe\\Downloads\\Govardhana\\PythonClass-main\\file:\\output.txt'</status>
+</test>
+<status status="FAIL" starttime="20230425 14:49:23.754" endtime="20230425 14:49:23.797"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Basic">Basic</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
